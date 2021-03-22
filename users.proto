@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option csharp_namespace = "Server";
+
+service User
+{
+	rpc ParseUserInfo(UserInput) returns (Reply); 
+}
+
+message UserInput
+{
+	string nume = 1;
+	string cnp = 2;
+}
+message Reply
+{
+	string nume = 1;
+	int32 varsta = 2;
+	string gen = 3;
+}
